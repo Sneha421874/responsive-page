@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website</title>
+
+    <style>
+        /* BASIC RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: #222;
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: #4c84ff;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        .btn {
+            margin-top: 20px;
+            padding: 12px 20px;
+            background: white;
+            color: #4c84ff;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        /* TWO COLUMN SECTION */
+        .two-column {
+            display: flex;
+            gap: 20px;
+            padding: 40px 20px;
+        }
+
+        .box {
+            flex: 1;
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 18px;
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 20px;
+            text-align: center;
+            background: #222;
+            color: white;
+        }
+
+        /* -------------------- RESPONSIVE MEDIA QUERIES -------------------- */
+
+        /* MOBILE VIEW (max-width: 600px) */
+        @media (max-width: 600px) {
+
+            .nav-links {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .two-column {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .box {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* TABLET VIEW (max-width: 900px) */
+        @media (max-width: 900px) {
+            .hero h1 {
+                font-size: 34px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <h2 class="logo">My Website</h2>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome to My Website</h1>
+            <p>This layout is fully responsive using CSS media queries.</p>
+            <button class="btn">Learn More</button>
+        </div>
+    </section>
+
+    <section class="two-column">
+        <div class="box">
+            <h2>Left Column</h2>
+            <p>This block will appear above the right block on mobile view.</p>
+        </div>
+        <div class="box">
+            <h2>Right Column</h2>
+            <p>This block stacks below the left one on small screens.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 My Website. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
